@@ -7,11 +7,17 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('3D Model Viewer'),
+      ),
       //backgroundColor: Colors.deepPurple,
-      body: Center(
-        child: SizedBox(
-            height: 20,
-            child: Flutter3DViewer(src: 'assts/3d/kawashaki_ninja_h2.glb')),
+      body: Column(
+        children: [
+          SizedBox(
+            height: 100,
+            child: Flutter3DViewer(src: 'assets/3d/AWPblack.glb'),
+          )
+        ],
       ),
     );
   }
